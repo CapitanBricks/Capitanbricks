@@ -16,37 +16,38 @@
       background-color: #f7f7f7;
     }
 
-    /* Contenedor Principal */
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 40px 20px;
+    /* Cabecera */
+    header {
       width: 100%;
-      max-width: 1200px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .profile-photo {
-      width: 100px;
-      height: 100px;
+    header .profile-info {
+      display: flex;
+      align-items: center;
+    }
+
+    header .profile-photo {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      margin-bottom: 20px;
+      margin-right: 10px;
     }
 
-    .description {
-      font-size: 1.2em;
-      margin-bottom: 30px;
+    header h1 {
+      margin: 0;
     }
 
-    /* Botones de Navegación */
+    /* Botones de Navegación en la Cabecera */
     .button-group {
       display: flex;
-      justify-content: space-around; /* Esto alinea los botones horizontalmente */
-      width: 100%; /* Asegura que los botones ocupen el espacio disponible */
-      gap: 20px; /* Espacio entre los botones */
-      margin-top: 20px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .button {
@@ -79,9 +80,26 @@
       text-decoration: none;
     }
 
+    /* Contenido Principal */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
-      .button-group {
+      header .button-group {
         flex-direction: column;
       }
     }
@@ -89,12 +107,14 @@
 </head>
 <body>
 
-  <!-- Contenido Principal -->
-  <div class="content">
-    <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
-    <p class="description">¡La mejor tienda de juguetes LEGO y más! Explora nuestros productos y promociones.</p>
+  <!-- Cabecera -->
+  <header>
+    <div class="profile-info">
+      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+      <h1>CapitanBricks - Tienda de Juguetes</h1>
+    </div>
 
-    <!-- Botones de Navegación -->
+    <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
       <a href="https://store.bricklink.com/CapitanBricks#/shop" target="_blank"><div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div></a>
       <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop"><div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div></a>
@@ -102,7 +122,13 @@
       <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119260&bID=-450788713&viewType=shop"><div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div></a>
       <a href="https://capitanbricks.brickowl.com/" target="_blank"><div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div></a>
     </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <div class="content">
+    <p class="description">¡La mejor tienda de juguetes LEGO y más! Explora nuestros productos y promociones.</p>
   </div>
 
 </body>
 </html>
+
