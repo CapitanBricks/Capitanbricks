@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CapitanBricks - Tienda de Juguetes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f7f7f7;
+    }
+
+    /* Contenedor Principal */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    /* Botones de Navegación */
+    .button-group {
+      display: flex;
+      justify-content: space-around; /* Esto alinea los botones horizontalmente */
+      width: 100%; /* Asegura que los botones ocupen el espacio disponible */
+      gap: 20px; /* Espacio entre los botones */
+      margin-top: 20px;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      background-color: #f22d03;
+      color: white;
+      padding: 10px;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .button:hover {
+      background-color: #d32f2f;
+    }
+
+    .button-group a {
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenido Principal -->
+  <div class="content">
+    <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+    <p class="description">¡La mejor tienda de juguetes LEGO y más! Explora nuestros productos y promociones.</p>
+
+    <!-- Botones de Navegación -->
+    <div class="button-group">
+      <a href="https://store.bricklink.com/CapitanBricks#/shop" target="_blank"><div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div></a>
+      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop"><div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div></a>
+      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119259&bID=-450788713&viewType=shop"><div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div></a>
+      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119260&bID=-450788713&viewType=shop"><div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div></a>
+      <a href="https://capitanbricks.brickowl.com/" target="_blank"><div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div></a>
+    </div>
+  </div>
+
+</body>
+</html>
