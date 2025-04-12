@@ -11,9 +11,10 @@
       padding: 0;
       background-color: #f7f7f7;
       display: flex;
-      justify-content: flex-start;  /* Asegura que el contenido se alinee al principio */
-      align-items: flex-start;  /* Alinea al inicio */
       flex-direction: column;
+      align-items: center;
+      height: 100%;
+      overflow-x: hidden; /* Evita el desplazamiento horizontal */
     }
 
     header {
@@ -24,8 +25,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 0;  /* Eliminado el margen superior */
-      margin-bottom: 20px;
+      position: absolute; /* Posiciona la cabecera en la parte superior */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000; /* Asegura que la cabecera se quede encima de otros elementos */
     }
 
     header .profile-info {
@@ -83,6 +87,7 @@
       height: 370px;
       object-fit: cover;
       display: block;
+      margin-top: 120px; /* Deja espacio debajo de la cabecera */
     }
 
     .buttons-container {
@@ -127,11 +132,6 @@
       height: 100%;
       margin: 0;
       padding: 0;
-    }
-
-    /* Eliminamos espacio en el body y header */
-    body {
-      min-height: 100%; /* Asegura que ocupe todo el espacio disponible */
     }
   </style>
 </head>
