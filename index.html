@@ -15,6 +15,7 @@
       align-items: center;
       flex-direction: column;
       height: 100vh;
+      visibility: hidden; /* Ocultamos la página hasta que se haya cargado completamente */
     }
 
     header {
@@ -150,6 +151,11 @@
 
   <!-- Script de BrickLink para iframe resizing -->
   <script src="//cache.bricklink.info/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>
+  <script>
+    window.onload = function() {
+      document.body.style.visibility = 'visible'; // Muestra la página después de que todo esté cargado
+    };
+  </script>
 </head>
 <body>
 
@@ -161,19 +167,19 @@
 
     <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
-      <a href="https://store.bricklink.com/CapitanBricks#/shop" target="_parent">
+      <a href="https://store.bricklink.com/CapitanBricks#/shop" target="_self">
         <div class="button">
           <img src="https://3bricks.si/splashs/icon_home.png" alt="Home" width="25px" height="25px" style="margin-bottom: 5px;">
           Home
         </div>
       </a>
-      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop" target="_parent">
+      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop" target="_self">
         <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
       </a>
-      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119259&bID=-450788713&viewType=shop" target="_parent">
+      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119259&bID=-450788713&viewType=shop" target="_self">
         <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
       </a>
-      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119260&bID=-450788713&viewType=shop" target="_parent">
+      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119260&bID=-450788713&viewType=shop" target="_self">
         <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
       </a>
       <a href="https://capitanbricks.brickowl.com/" target="_blank">
@@ -187,15 +193,15 @@
 
   <!-- Botones debajo de la imagen -->
   <div class="buttons-container">
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue" target="_parent">
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue" target="_self">
       <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 120px; height: 160px;">
       <span>Minifiguras</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red" target="_parent">
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red" target="_self">
       <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 202px; height: 138px;">
       <span>Piezas</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow" target="_parent">
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow" target="_self">
       <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets">
       <span>Sets</span>
     </a>
