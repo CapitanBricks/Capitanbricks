@@ -21,30 +21,31 @@
       width: 100%;
       background-color: #cc0505;
       color: #fff;
-      padding: 20px 40px;
+      padding: 40px 40px; /* Aumenté el padding */
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 30px; /* Añadí margen superior */
       margin-bottom: 20px;
     }
 
     header .profile-info {
       display: flex;
       align-items: center;
-      margin-right: 20px;
+      margin-right: 30px; /* Aumenté el margen derecho */
     }
 
     header .profile-photo {
-      width: 80px;
-      height: 80px;
+      width: 100px; /* Reduje el tamaño de la foto */
+      height: 100px; /* Reduje el tamaño de la foto */
       border-radius: 50%;
-      margin-right: 10px;
+      margin-right: 15px; /* Aumenté el margen derecho */
     }
 
     .button-group {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 15px; /* Aumenté el espacio entre los botones */
     }
 
     .button {
@@ -52,8 +53,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100px;
-      height: 40px;
+      width: 120px; /* Aumenté el tamaño del botón */
+      height: 50px; /* Aumenté el tamaño del botón */
       background-color: #cc0505;
       color: white;
       padding: 10px;
@@ -64,8 +65,8 @@
     }
 
     .button img {
-      width: 25px;
-      height: 25px;
+      width: 30px; /* Aumenté el tamaño de las imágenes dentro de los botones */
+      height: 30px; /* Aumenté el tamaño de las imágenes dentro de los botones */
       margin-bottom: 5px;
     }
 
@@ -87,16 +88,17 @@
 
     .buttons-container {
       display: flex;
-      justify-content: space-evenly; /* Cambié de "center" a "space-evenly" */
+      justify-content: center;
       gap: 20px;
       margin-top: 20px;
       width: 100%;
       flex-wrap: wrap;
+      justify-content: center; /* Centrado de los botones */
     }
 
     .square-button {
-      width: 300px; /* Reducido el tamaño para asegurar que los botones caben */
-      height: 300px;
+      width: 450px;
+      height: 450px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -108,8 +110,8 @@
     }
 
     .square-button img {
-      width: 120px;
-      height: 120px;
+      width: 150px; /* Tamaño de las imágenes restaurado */
+      height: 150px; /* Tamaño de las imágenes restaurado */
       margin-bottom: 10px;
     }
 
@@ -121,53 +123,50 @@
     .red { background-color: #8B0000; }
     .yellow { background-color: #ffd60c; }
   </style>
-
-  <!-- Script de BrickLink para iframe resizing -->
-  <script src="//cache.bricklink.info/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>
 </head>
 <body>
 
   <!-- Cabecera -->
   <header>
     <div class="profile-info">
-      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo" loading="lazy">
     </div>
 
     <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
       <a href="https://store.bricklink.com/CapitanBricks#/shop">
-        <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
+        <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home" loading="lazy"> Home</div>
       </a>
       <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop">
-        <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
+        <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts" loading="lazy"> Discounts</div>
       </a>
       <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119259&bID=-450788713&viewType=shop">
-        <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
+        <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping" loading="lazy"> Shipping</div>
       </a>
       <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119260&bID=-450788713&viewType=shop">
-        <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
+        <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality" loading="lazy"> Quality</div>
       </a>
       <a href="https://capitanbricks.brickowl.com/" target="_blank">
-        <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div>
+        <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl" loading="lazy"> Brickowl</div>
       </a>
     </div>
   </header>
 
   <!-- Imagen con altura ajustada -->
-  <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image">
+  <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image" loading="lazy">
 
   <!-- Botones debajo de la imagen -->
   <div class="buttons-container">
     <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue">
-      <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras">
+      <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" loading="lazy">
       <span>Minifiguras</span>
     </a>
     <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red">
-      <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas">
+      <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" loading="lazy">
       <span>Piezas</span>
     </a>
     <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow">
-      <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets">
+      <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets" loading="lazy">
       <span>Sets</span>
     </a>
   </div>
