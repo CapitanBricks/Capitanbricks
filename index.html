@@ -153,12 +153,11 @@
   <!-- Script de BrickLink para iframe resizing -->
   <script src="//cache.bricklink.info/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>
   <script>
-    // Esperar a que el contenido de la página se haya cargado
+    // Asegurarse de que el contenido está completamente cargado antes de cambiar la visibilidad
     window.onload = function() {
-      // Forzar la visibilidad de la página con un pequeño retraso
       setTimeout(function() {
         document.body.style.opacity = '1'; // Hace la página visible
-      }, 500); // Retraso de 500ms para sincronizar con el proceso de carga
+      }, 1000); // Retraso de 1000ms para asegurar que todo esté cargado
     };
   </script>
 </head>
@@ -174,7 +173,7 @@
     <div class="button-group">
       <a href="https://store.bricklink.com/CapitanBricks#/shop" target="_self">
         <div class="button">
-          <img src="https://3bricks.si/splashs/icon_home.png" alt="Home" width="25px" height="25px" style="margin-bottom: 5px;">
+          <img src="https://i.postimg.cc/Kc6mCnVj/553335.png" alt="Home" width="25px" height="25px" style="margin-bottom: 5px;">
           Home
         </div>
       </a>
@@ -206,11 +205,4 @@
       <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 202px; height: 138px;">
       <span>Piezas</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow" target="_self">
-      <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets">
-      <span>Sets</span>
-    </a>
-  </div>
-
-</body>
-</html>
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pg
