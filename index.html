@@ -15,8 +15,8 @@
       align-items: center;
       flex-direction: column;
       height: 100vh;
-      opacity: 0; /* Página oculta inicialmente */
-      transition: opacity 0.5s ease; /* Efecto de transición */
+      opacity: 1; /* Hacer la página visible inmediatamente */
+      transition: opacity 0.5s ease;
     }
 
     header {
@@ -152,14 +152,6 @@
 
   <!-- Script de BrickLink para iframe resizing -->
   <script src="//cache.bricklink.info/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>
-  <script>
-    // Asegurarse de que el contenido está completamente cargado antes de cambiar la visibilidad
-    window.onload = function() {
-      setTimeout(function() {
-        document.body.style.opacity = '1'; // Hace la página visible
-      }, 1000); // Retraso de 1000ms para asegurar que todo esté cargado
-    };
-  </script>
 </head>
 <body>
 
