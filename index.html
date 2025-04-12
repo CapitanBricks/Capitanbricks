@@ -15,7 +15,9 @@
       align-items: center;
       flex-direction: column;
       height: 100vh;
-      visibility: hidden; /* Ocultamos la página hasta que se haya cargado completamente */
+      opacity: 0; /* Hace que la página sea invisible al principio */
+      transition: opacity 0.5s ease; /* Añadimos un efecto de transición */
+      z-index: -1; /* Asegura que el contenido se renderice pero no sea visible */
     }
 
     header {
@@ -152,9 +154,11 @@
   <!-- Script de BrickLink para iframe resizing -->
   <script src="//cache.bricklink.info/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>
   <script>
-    window.onload = function() {
-      document.body.style.visibility = 'visible'; // Muestra la página después de que todo esté cargado
-    };
+    document.addEventListener("DOMContentLoaded", function() {
+      // Cuando el contenido se haya cargado completamente, mostramos la página
+      document.body.style.opacity = '1';
+      document.body.style.zIndex = '0';  // Asegura que la página esté en el índice z correcto
+    });
   </script>
 </head>
 <body>
