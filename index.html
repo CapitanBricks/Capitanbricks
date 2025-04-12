@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CapitanBricks - Tienda de Juguetes</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
 
+  <!-- Script de BrickLink para iframe -->
+  <script src="https://cache.bricklink.info/vendor/iframeResizer.contentWindow.3.5.3.min.js"></script>
+
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -46,34 +46,36 @@
       justify-content: center;
     }
 
-    .button-group a {
-      text-decoration: none;
-    }
-
     .button {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-width: 80px;
+      width: 90px;
       height: 60px;
-      padding: 10px;
       background-color: #cc0505;
       color: white;
+      padding: 5px;
       border-radius: 8px;
-      transition: 0.3s ease;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
       text-align: center;
+      font-size: 14px;
     }
 
     .button img {
-      width: 24px;
-      height: 24px;
-      margin-bottom: 5px;
+      width: 25px;
+      height: 25px;
+      margin-bottom: 4px;
     }
 
     .button:hover {
       background-color: #b40404;
       transform: scale(1.05);
+    }
+
+    .button-group a {
+      text-decoration: none;
     }
 
     .hero-image {
@@ -86,30 +88,27 @@
     .buttons-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
+      gap: 20px;
       padding: 20px;
     }
 
     .square-button {
-      width: 30%;
-      max-width: 400px;
-      aspect-ratio: 1/1;
+      width: 300px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
     .square-button img {
-      width: 40%;
-      max-width: 150px;
-      height: auto;
+      width: 100px;
+      height: 100px;
       margin-bottom: 10px;
     }
 
@@ -119,39 +118,36 @@
 
     .blue { background-color: #003366; }
     .red { background-color: #8B0000; }
-    .yellow { background-color: #ffd60c; color: #000; }
+    .yellow { background-color: #ffd60c; }
 
     @media (max-width: 768px) {
+      .square-button {
+        width: 90%;
+        height: auto;
+        padding: 30px 0;
+      }
+
+      .square-button img {
+        width: 80px;
+        height: 80px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
       .button-group {
         flex-direction: column;
         align-items: center;
-      }
-
-      .square-button {
-        width: 80%;
-      }
-
-      .profile-photo {
-        width: 50px;
-        height: 50px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-
-      .button {
-        min-width: 100px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Cabecera -->
   <header>
     <div class="profile-info">
       <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
@@ -176,8 +172,10 @@
     </div>
   </header>
 
+  <!-- Imagen principal -->
   <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image">
 
+  <!-- Botones principales -->
   <div class="buttons-container">
     <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue">
       <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras">
@@ -192,6 +190,10 @@
       <span>Sets</span>
     </a>
   </div>
+
+</body>
+</html>
+
 
 </body>
 </html>
