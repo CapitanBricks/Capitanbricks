@@ -95,8 +95,8 @@
     }
 
     .square-button {
-      width: 450px;
-      height: 450px;
+      width: 300px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -105,11 +105,12 @@
       color: white;
       cursor: pointer;
       transition: transform 0.3s ease, background-color 0.3s ease;
+      margin: 10px;
     }
 
     .square-button img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: auto;
       margin-bottom: 10px;
     }
 
@@ -120,6 +121,7 @@
     .blue { background-color: #003366; }
     .red { background-color: #8B0000; }
     .yellow { background-color: #ffd60c; }
+
   </style>
 </head>
 <body>
@@ -150,7 +152,7 @@
     </div>
   </header>
 
-  <!-- Imagen con altura ajustada -->
+  <!-- Imagen Principal -->
   <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image">
 
   <!-- Botones debajo de la imagen -->
@@ -169,8 +171,25 @@
     </a>
   </div>
 
+  <!-- Cajas de Botones con Colores -->
+  <div class="buttons-container">
+    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" target="_parent" class="square-button blue">
+      <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 120px;">
+      <span>Minifiguras</span>
+    </a>
+    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" target="_parent" class="square-button red">
+      <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 120px;">
+      <span>Piezas</span>
+    </a>
+    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" target="_parent" class="square-button yellow">
+      <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets" style="width: 120px;">
+      <span>Sets</span>
+    </a>
+  </div>
+
 </body>
 </html>
+
 
 </body>
 </html>
