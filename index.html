@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CapitanBricks - Tienda de Juguetes</title>
   <style>
     body {
@@ -11,10 +11,10 @@
       padding: 0;
       background-color: #f7f7f7;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      flex-direction: column;
+      height: 100vh;
     }
 
     header {
@@ -23,20 +23,26 @@
       color: #fff;
       padding: 20px 40px;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      margin-bottom: 20px;
     }
 
-    .profile-photo {
-      width: 100px;
-      height: 100px;
+    header .profile-info {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    header .profile-photo {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      margin-right: 10px;
     }
 
     .button-group {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
     }
@@ -116,8 +122,18 @@
     .yellow { background-color: #ffd60c; }
 
     @media (max-width: 768px) {
+      header .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .hero-image {
         height: 250px;
+      }
+
+      .buttons-container {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .square-button {
@@ -139,11 +155,13 @@
 
   <!-- Cabecera -->
   <header>
-    <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+    <div class="profile-info">
+      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+    </div>
 
     <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
-      <a href="https://store.bricklink.com/CapitanBricks#/shop" target="_blank">
+      <a href="https://store.bricklink.com/CapitanBricks#/shop">
         <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
       </a>
       <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop">
@@ -161,20 +179,20 @@
     </div>
   </header>
 
-  <!-- Imagen Principal -->
+  <!-- Imagen con altura ajustada -->
   <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image">
 
-  <!-- Botones Grandes -->
+  <!-- Botones debajo de la imagen -->
   <div class="buttons-container">
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue" target="_blank">
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue">
       <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 120px; height: 160px;">
       <span>Minifiguras</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red" target="_blank">
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red">
       <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 202px; height: 138px;">
       <span>Piezas</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow" target="_blank">
+    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow">
       <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets">
       <span>Sets</span>
     </a>
