@@ -10,40 +10,30 @@
       margin: 0;
       padding: 0;
       background-color: #f7f7f7;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
     }
 
     header {
       width: 100%;
       background-color: #cc0505;
       color: #fff;
-      padding: 20px 40px;
+      padding: 20px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       margin-bottom: 20px;
     }
 
-    header .profile-info {
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-    }
-
-    header .profile-photo {
+    .profile-photo {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      margin-right: 10px;
+      margin-bottom: 10px;
     }
 
     .button-group {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 10px;
     }
 
@@ -90,13 +80,12 @@
       justify-content: center;
       gap: 20px;
       margin-top: 20px;
-      width: 100%;
       flex-wrap: wrap;
     }
 
     .square-button {
-      width: 450px;
-      height: 450px;
+      width: 300px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -105,11 +94,12 @@
       color: white;
       cursor: pointer;
       transition: transform 0.3s ease, background-color 0.3s ease;
+      border-radius: 12px;
     }
 
     .square-button img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: auto;
       margin-bottom: 10px;
     }
 
@@ -119,14 +109,9 @@
 
     .blue { background-color: #003366; }
     .red { background-color: #8B0000; }
-    .yellow { background-color: #ffd60c; }
+    .yellow { background-color: #ffd60c; color: #000; }
 
     @media (max-width: 768px) {
-      header .button-group {
-        flex-direction: column;
-        align-items: center;
-      }
-
       .hero-image {
         height: 250px;
       }
@@ -137,13 +122,12 @@
       }
 
       .square-button {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
       }
 
       .square-button img {
         width: 100px;
-        height: 100px;
       }
     }
   </style>
@@ -155,11 +139,7 @@
 
   <!-- Cabecera -->
   <header>
-    <div class="profile-info">
-      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
-    </div>
-
-    <!-- Botones de Navegación en la Cabecera -->
+    <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
     <div class="button-group">
       <a href="https://store.bricklink.com/CapitanBricks#/shop">
         <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
@@ -184,15 +164,15 @@
 
   <!-- Botones debajo de la imagen -->
   <div class="buttons-container">
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue" target="_blank">
-      <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 120px; height: 160px;">
+    <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119261&bID=-450788713&viewType=shop" class="square-button blue">
+      <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras">
       <span>Minifiguras</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red" target="_blank">
-      <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 202px; height: 138px;">
+    <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119262&bID=-450788713&viewType=shop" class="square-button red">
+      <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas">
       <span>Piezas</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow" target="_blank">
+    <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119263&bID=-450788713&viewType=shop" class="square-button yellow">
       <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets">
       <span>Sets</span>
     </a>
