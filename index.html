@@ -11,17 +11,17 @@
       padding: 0;
       background-color: #f7f7f7;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      height: 100vh;
+      align-items: center;
+      height: 100%;
+      overflow-x: hidden;
     }
 
     header {
       width: 100%;
       background-color: #cc0505;
       color: #fff;
-      padding: 40px 40px; /* Aumenté el padding */
+      padding: 20px 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,20 +31,20 @@
     header .profile-info {
       display: flex;
       align-items: center;
-      margin-right: 30px; /* Aumenté el margen derecho */
+      margin-right: 20px;
     }
 
     header .profile-photo {
-      width: 120px; /* Aumenté el tamaño de la foto */
-      height: 120px; /* Aumenté el tamaño de la foto */
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      margin-right: 15px; /* Aumenté el margen derecho */
+      margin-right: 10px;
     }
 
     .button-group {
       display: flex;
       justify-content: center;
-      gap: 15px; /* Aumenté el espacio entre los botones */
+      gap: 10px;
     }
 
     .button {
@@ -52,8 +52,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 120px; /* Aumenté el tamaño del botón */
-      height: 50px; /* Aumenté el tamaño del botón */
+      width: 100px;
+      height: 40px;
       background-color: #cc0505;
       color: white;
       padding: 10px;
@@ -64,8 +64,8 @@
     }
 
     .button img {
-      width: 30px; /* Aumenté el tamaño de las imágenes dentro de los botones */
-      height: 30px; /* Aumenté el tamaño de las imágenes dentro de los botones */
+      width: 25px;
+      height: 25px;
       margin-bottom: 5px;
     }
 
@@ -92,7 +92,6 @@
       margin-top: 20px;
       width: 100%;
       flex-wrap: wrap;
-      justify-content: center; /* Centrado de los botones */
     }
 
     .square-button {
@@ -109,8 +108,8 @@
     }
 
     .square-button img {
-      width: 150px; /* Tamaño de las imágenes restaurado */
-      height: 150px; /* Tamaño de las imágenes restaurado */
+      width: 150px;
+      height: 150px;
       margin-bottom: 10px;
     }
 
@@ -128,48 +127,47 @@
   <!-- Cabecera -->
   <header>
     <div class="profile-info">
-      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo" loading="lazy">
+      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
     </div>
 
     <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
-      <a href="https://store.bricklink.com/CapitanBricks#/shop">
-        <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home" loading="lazy"> Home</div>
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
       </a>
-      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119258&bID=-450788713&viewType=shop">
-        <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts" loading="lazy"> Discounts</div>
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
       </a>
-      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119259&bID=-450788713&viewType=shop">
-        <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping" loading="lazy"> Shipping</div>
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
       </a>
-      <a href="https://www.bricklink.com/v2/splash.page?uID=2769699&pageID=119260&bID=-450788713&viewType=shop">
-        <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality" loading="lazy"> Quality</div>
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
       </a>
-      <a href="https://capitanbricks.brickowl.com/" target="_blank">
-        <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl" loading="lazy"> Brickowl</div>
+      <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div>
       </a>
     </div>
   </header>
 
   <!-- Imagen con altura ajustada -->
-  <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image" loading="lazy">
+  <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image">
 
   <!-- Botones debajo de la imagen -->
   <div class="buttons-container">
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" class="square-button blue">
-      <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" loading="lazy">
+    <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+      <img class="img-fluid" src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 150px; height: 150px;">
       <span>Minifiguras</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" class="square-button red">
-      <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" loading="lazy">
+    <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+      <img class="img-fluid" src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 150px; height: 150px;">
       <span>Piezas</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" class="square-button yellow">
-      <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets" loading="lazy">
+    <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+      <img class="img-fluid" src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets" style="width: 150px; height: 150px;">
       <span>Sets</span>
     </a>
   </div>
 
 </body>
 </html>
-
