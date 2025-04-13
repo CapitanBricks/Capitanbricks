@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CapitanBricks - Descuentos</title>
+  <style>
+    /* Estilo general del cuerpo */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      overflow-x: hidden;
+      padding-left: 10px; /* Margen izquierdo */
+      padding-right: 10px; /* Margen derecho */
+    }
 
+    /* Cabecera */
+    header {
+      width: 100%;
+      background-color: #cc0505;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    header .profile-info {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    header .profile-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    /* Botones de Navegación en la Cabecera */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 40px;
+      background-color: #cc0505;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-align: center;
+    }
+
+    .button img {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 5px;
+    }
+
+    .button:hover {
+      background-color: #b40404;
+      transform: scale(1.1);
+    }
+
+    .button-group a {
+      text-decoration: none;
+    }
+
+    /* Contenedor de contenido */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .content-item {
+      display: flex;
+      align-items: center;
+      margin: 15px;
+      width: 80%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-item img {
+      width: 120px;
+      height: 120px;
+      margin-right: 20px;
+    }
+
+    .content-item span {
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Sección de Descuentos */
+    .discount-section {
+      display: flex;
+      flex-direction: row; /* Imagen a la izquierda y texto a la derecha */
+      justify-content: flex-start;
+      margin-top: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 95%; /* Aumento del contenedor al 95% */
+      max-width: 1200px; /* Para no exceder un ancho grande en pantallas muy anchas */
+      margin: 0 auto; /* Centrar el contenedor */
+    }
+
+    .discount-section .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 20px; /* Separar imagen del texto */
+    }
+
+    .discount-section h2 {
+      margin-bottom: 10px;
+      color: #cc0505;
+    }
+
+    .discount-section p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .discount-section img {
+      width: 50%; /* Reducir la imagen a la mitad */
+      height: auto;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 15px; /* Bordes redondeados en la imagen */
+      margin-bottom: 10px; /* Espacio debajo de la imagen */
+    }
+
+    /* Hacer que el texto y la imagen sean más pequeños en pantallas más pequeñas */
+    @media (max-width: 768px) {
+      .discount-section {
+        flex-direction: column; /* Apilar la imagen y el texto en dispositivos más pequeños */
+        padding: 15px;
+      }
+
+      .discount-section img {
+        width: 100%; /* Imagen ocupa todo el ancho en pantallas pequeñas */
+        margin-right: 0;
+      }
+
+      .discount-section .text-container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<!-- Cabecera -->
+   <header>
+    <div class="profile-info">
+      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+    </div>
+
+    <!-- Botones de Navegación en la Cabecera -->
+    <div class="button-group">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:1}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
+      </a>
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/descuentos.html" target="_self">
+        <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
+      </a>
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/shipping.html" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
+      </a>
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/quality.html" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
+      </a>
+      <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Nueva Sección de Descuentos -->
+  <div class="discount-section">
+    <img src="https://i.postimg.cc/hPWQncng/Chat-GPT-Image-11-abr-2025-23-46-24.png" alt="Descuentos">
+    <div class="text-container">
+      <div class="spanish">
+        <h2>Español:</h2>
+        <p>Valoramos profundamente a nuestros clientes y nos esforzamos por garantizar su total satisfacción con los productos y servicios que ofrecemos.</p>
+        <p>Por ello, con cada pedido recibirás tarjetas con códigos de descuento o incluso de envío gratuito.</p>
+        <p>Nuestro objetivo es convertirnos en una de las mejores tiendas a nivel nacional, y trabajamos cada día para lograrlo.</p>
+        <p>Por eso, queremos que nos acompañéis en este viaje y que sintáis nuestra tienda como un rincón de confianza.</p>
+      </div>
+      <div class="english">
+        <h2>English:</h2>
+        <p>We deeply value our customers and strive to ensure their complete satisfaction with the products and services we offer.</p>
+        <p>That’s why, with every order, you will receive cards with discount codes or even free shipping offers.</p>
+        <p>Our goal is to become one of the best stores nationally, and we work every day to achieve this.</p>
+        <p>That’s why we want you to join us on this journey and feel our store as a place of trust.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
