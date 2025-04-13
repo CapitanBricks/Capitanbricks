@@ -118,29 +118,31 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 80%;
-      max-width: 800px;
+      max-width: 1000px;
     }
 
     .discount-section img {
-      width: 900px; /* Imagen tres veces más grande */
-      height: 900px;
+      width: 900px; /* Imagen más grande */
+      height: auto; /* Mantener la proporción */
       object-fit: cover;
       margin-right: 20px;
+    }
+
+    .discount-section .text-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    .discount-section h2 {
+      margin-bottom: 10px;
+      color: #cc0505;
     }
 
     .discount-section p {
       font-size: 18px;
       color: #333;
       line-height: 1.6;
-    }
-
-    .discount-section .text-container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .text-container .spanish, .text-container .english {
-      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -192,10 +194,6 @@
       </div>
     </div>
   </div>
-
-</body>
-</html>
-
 
 </body>
 </html>
