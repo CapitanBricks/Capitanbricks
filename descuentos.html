@@ -118,24 +118,23 @@
     /* Sección de Descuentos */
     .discount-section {
       display: flex;
-      flex-direction: column;
+      flex-direction: row; /* Imagen a la izquierda y texto a la derecha */
       justify-content: flex-start;
       margin-top: 30px;
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 80%; /* Reducido al 80% */
+      width: 85%; /* Aumento del contenedor al 85% */
       max-width: 1200px; /* Para no exceder un ancho grande en pantallas muy anchas */
       margin: 0 auto; /* Centrar el contenedor */
-      height: auto;
     }
 
     .discount-section .text-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin-bottom: 20px; /* Separar texto de la imagen */
+      margin-left: 20px; /* Separar imagen del texto */
     }
 
     .discount-section h2 {
@@ -150,8 +149,8 @@
     }
 
     .discount-section img {
-      width: auto; /* Mantener el tamaño original de la imagen */
-      height: auto; /* Mantener el tamaño original de la imagen */
+      width: 50%; /* Reducir la imagen a la mitad */
+      height: auto;
       object-fit: cover;
       margin-top: 20px;
       border-radius: 15px; /* Bordes redondeados en la imagen */
@@ -206,6 +205,7 @@
 
   <!-- Nueva Sección de Descuentos -->
   <div class="discount-section">
+    <img src="https://i.postimg.cc/J45rM9Vg/Chat-GPT-Image-11-abr-2025-23-46-24.png" alt="Descuentos">
     <div class="text-container">
       <div class="spanish">
         <h2>Español:</h2>
@@ -222,10 +222,8 @@
         <p>That’s why we want you to join us on this journey and feel our store as a place of trust.</p>
       </div>
     </div>
-    <img src="https://i.postimg.cc/J45rM9Vg/Chat-GPT-Image-11-abr-2025-23-46-24.png" alt="Descuentos">
   </div>
 
 </body>
 </html>
-
 
