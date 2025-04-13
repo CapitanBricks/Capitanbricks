@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CapitanBricks - Descuentos</title>
   <style>
+    /* Estilo general del cuerpo */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -17,6 +18,7 @@
       overflow-x: hidden;
     }
 
+    /* Cabecera */
     header {
       width: 100%;
       background-color: #cc0505;
@@ -41,6 +43,7 @@
       margin-right: 10px;
     }
 
+    /* Botones de Navegación en la Cabecera */
     .button-group {
       display: flex;
       justify-content: center;
@@ -78,6 +81,7 @@
       text-decoration: none;
     }
 
+    /* Contenedor de contenido */
     .content-container {
       display: flex;
       flex-direction: column;
@@ -109,21 +113,25 @@
       color: #333;
     }
 
+    /* Sección de Descuentos */
     .discount-section {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       margin-top: 30px;
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 80%;
-      max-width: 1000px;
+      width: 100%;
+      height: 100vh; /* Ocupa todo el alto de la página */
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .discount-section img {
-      width: 900px; /* Imagen más grande */
-      height: auto; /* Mantener la proporción */
+      width: 50%; /* La imagen ocupa la mitad del contenedor */
+      height: auto;
       object-fit: cover;
       margin-right: 20px;
     }
@@ -131,7 +139,8 @@
     .discount-section .text-container {
       display: flex;
       flex-direction: column;
-      max-width: 500px;
+      justify-content: center;
+      max-width: 50%; /* El texto ocupa la otra mitad */
     }
 
     .discount-section h2 {
@@ -143,6 +152,25 @@
       font-size: 18px;
       color: #333;
       line-height: 1.6;
+    }
+
+    /* Hacer que el texto y la imagen sean más pequeños en pantallas más pequeñas */
+    @media (max-width: 768px) {
+      .discount-section {
+        flex-direction: column; /* Apilar la imagen y el texto en dispositivos más pequeños */
+        height: auto;
+        padding: 15px;
+      }
+
+      .discount-section img {
+        width: 100%; /* Imagen ocupa todo el ancho en pantallas pequeñas */
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .discount-section .text-container {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -197,3 +225,4 @@
 
 </body>
 </html>
+
