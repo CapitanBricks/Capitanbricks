@@ -78,23 +78,49 @@
       text-decoration: none;
     }
 
-    /* Estilo para el iframe */
-    iframe {
+    .hero-image {
       width: 100%;
-      height: 80vh; /* Ajusta la altura del iframe */
-      border: none;
-      margin-top: 20px;
+      height: 370px;
+      object-fit: cover;
+      display: block;
     }
 
-    /* Mensaje de redirección */
-    .redirect-message {
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2em;
-      background-color: #f5a623;
-      color: white;
-      border-radius: 10px;
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      width: 100%;
+      flex-wrap: wrap;
     }
+
+    .square-button {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      margin: 10px;
+    }
+
+    .square-button img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .square-button:hover {
+      transform: scale(1.1);
+    }
+
+    .blue { background-color: #003366; }
+    .red { background-color: #8B0000; }
+    .yellow { background-color: #ffd60c; }
   </style>
 </head>
 <body>
@@ -105,59 +131,45 @@
       <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
     </div>
 
-    <!-- Botones de Navegación -->
+    <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('home')" target="content-frame">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
         <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('discounts')" target="content-frame">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
         <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('shipping')" target="content-frame">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
         <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('quality')" target="content-frame">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
         <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadBrickLink()" target="content-frame">
+      <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="_parent">
         <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div>
       </a>
     </div>
   </header>
 
-  <!-- Iframe donde se cargará el contenido de BrickLink -->
-  <iframe name="content-frame" id="content-frame" src="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}" frameborder="0"></iframe>
+  <!-- Imagen Principal -->
+  <img src="https://iili.io/3cWvqUG.png" alt="Imagen Principal" class="hero-image">
 
-  <!-- Mensaje de redirección para BrickLink -->
-  <div class="redirect-message" id="bricklink-message" style="display:none;">
-    <p>Para visitar nuestra tienda en BrickLink, haz clic en el siguiente botón:</p>
-    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks" target="_blank" class="button" style="background-color: #f5a623; color: white;">Visitar Tienda</a>
+  <!-- Botones debajo de la imagen -->
+  <div class="buttons-container">
+    <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+      <img class="img-fluid" src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 150px; height: 150px;">
+      <span>Minifiguras</span>
+    </a>
+    <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+      <img class="img-fluid" src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 150px; height: 150px;">
+      <span>Piezas</span>
+    </a>
+    <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+      <img class="img-fluid" src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets" style="width: 150px; height: 150px;">
+      <span>Sets</span>
+    </a>
   </div>
-
-  <script>
-    function loadContent(section) {
-      var iframe = document.getElementById('content-frame');
-
-      var urls = {
-        home: "https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}",
-        discounts: "https://capitanbricks.github.io/Capitanbricks/descuentos.html",
-        shipping: "https://capitanbricks.github.io/Capitanbricks/shipping.html",
-        quality: "https://capitanbricks.github.io/Capitanbricks/quality.html"
-      };
-
-      // Cambiar el contenido del iframe con la URL seleccionada
-      iframe.src = urls[section];
-    }
-
-    function loadBrickLink() {
-      var iframe = document.getElementById('content-frame');
-      var message = document.getElementById('bricklink-message');
-      
-      // Mostrar el mensaje de redirección
-      message.style.display = "block";
-      iframe.style.display = "none";  // Ocultar el iframe mientras mostramos el mensaje
-    }
-  </script>
 
 </body>
 </html>
+
