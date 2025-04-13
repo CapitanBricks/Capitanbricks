@@ -122,18 +122,6 @@
     .red { background-color: #8B0000; }
     .yellow { background-color: #ffd60c; }
 
-    /* Contenedor del iframe */
-    #iframe-container {
-      width: 100%;
-      height: 80vh;
-      margin-top: 20px;
-      border: none;
-    }
-
-    /* Estilos de contenido de las secciones */
-    .section-content {
-      display: none;
-    }
   </style>
 </head>
 <body>
@@ -149,13 +137,13 @@
       <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:1}" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('discounts')" target="content-frame">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('shipping')" target="content-frame">
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/shipping.html" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
       </a>
-      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('quality')" target="content-frame">
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/quality.html" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
       </a>
       <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="content-frame">
@@ -183,25 +171,8 @@
     </a>
   </div>
 
-  <!-- Contenedor para cargar el contenido dentro del iframe -->
-  <div id="iframe-container">
-    <iframe id="content-frame" name="content-frame" src="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}" frameborder="0" width="100%" height="100%"></iframe>
-  </div>
-
-  <script>
-    function loadContent(section) {
-      var iframe = document.getElementById('content-frame');
-      
-      var urls = {
-        shipping: "https://capitanbricks.github.io/Capitanbricks/shipping.html",
-        quality: "https://capitanbricks.github.io/Capitanbricks/quality.html",
-        discounts: "https://capitanbricks.github.io/Capitanbricks/descuentos.html"
-      };
-
-      // Actualizar el src del iframe para cargar la sección correspondiente
-      iframe.src = urls[section];
-    }
-  </script>
+  <!-- Iframe donde se cargará el contenido de BrickLink -->
+  <iframe name="content-frame" src="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}" frameborder="0" width="100%" height="80vh"></iframe>
 
 </body>
 </html>
