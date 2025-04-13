@@ -97,16 +97,16 @@
 
     <!-- Botones de Navegación -->
     <div class="button-group">
-      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:1}" target="content-frame">
+      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('home')" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/discounts.html" target="content-frame">
+      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('discounts')" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/shipping.html" target="content-frame">
+      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('shipping')" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/quality.html" target="content-frame">
+      <a class="nav-link" href="javascript:void(0)" onclick="loadContent('quality')" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
       </a>
       <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="content-frame">
@@ -116,7 +116,23 @@
   </header>
 
   <!-- Iframe donde se cargará el contenido de BrickLink -->
-  <iframe name="content-frame" src="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}" frameborder="0"></iframe>
+  <iframe name="content-frame" id="content-frame" src="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}" frameborder="0"></iframe>
+
+  <script>
+    function loadContent(section) {
+      var iframe = document.getElementById('content-frame');
+
+      var urls = {
+        home: "https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}",
+        discounts: "https://capitanbricks.github.io/Capitanbricks/descuentos.html",
+        shipping: "https://capitanbricks.github.io/Capitanbricks/shipping.html",
+        quality: "https://capitanbricks.github.io/Capitanbricks/quality.html"
+      };
+
+      // Cambiar el contenido del iframe con la URL seleccionada
+      iframe.src = urls[section];
+    }
+  </script>
 
 </body>
 </html>
