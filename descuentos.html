@@ -78,12 +78,6 @@
       text-decoration: none;
     }
 
-    /* Eliminado el fondo oscuro al hacer clic */
-    /* .button.discount-button:active {
-      background-color: #333; 
-      transform: scale(1.1);
-    } */
-
     .content-container {
       display: flex;
       flex-direction: column;
@@ -115,7 +109,6 @@
       color: #333;
     }
 
-    /* Estilo para la nueva sección con imagen y párrafo */
     .discount-section {
       display: flex;
       align-items: center;
@@ -129,8 +122,8 @@
     }
 
     .discount-section img {
-      width: 150px;
-      height: 150px;
+      width: 300px; /* Tamaño aumentado para la imagen */
+      height: 300px;
       object-fit: cover;
       margin-right: 20px;
     }
@@ -141,6 +134,14 @@
       line-height: 1.6;
     }
 
+    .discount-section .text-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-container .spanish, .text-container .english {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -171,36 +172,26 @@
     </div>
   </header>
 
-
   <!-- Nueva Sección de Descuentos -->
-<div class="discount-section">
+  <div class="discount-section">
     <img src="https://i.postimg.cc/J45rM9Vg/Chat-GPT-Image-11-abr-2025-23-46-24.png" alt="Descuentos">
-    <p>Español:
-
-Valoramos profundamente a nuestros clientes y nos esforzamos por garantizar su total satisfacción con los productos y servicios que ofrecemos.
-
-Por ello, con cada pedido recibirás tarjetas con códigos de descuento o incluso de envío gratuito.
-
-Nuestro objetivo es convertirnos en una de las mejores tiendas a nivel nacional, y trabajamos cada día para lograrlo.
-
-Por eso, queremos que nos acompañéis en este viaje y que sintáis nuestra tienda como un rincón de confianza.
-
-English:
-
-We deeply value our customers and strive to ensure their complete satisfaction with the products and services we offer.
-
-That’s why, with every order, you will receive cards with discount codes or even free shipping offers.
-
-Our goal is to become one of the best stores nationally, and we work every day to achieve this.
-
-That’s why we want you to join us on this journey and feel our store as a place of trust.</p>
+    <div class="text-container">
+      <div class="spanish">
+        <h2>Español:</h2>
+        <p>Valoramos profundamente a nuestros clientes y nos esforzamos por garantizar su total satisfacción con los productos y servicios que ofrecemos.</p>
+        <p>Por ello, con cada pedido recibirás tarjetas con códigos de descuento o incluso de envío gratuito.</p>
+        <p>Nuestro objetivo es convertirnos en una de las mejores tiendas a nivel nacional, y trabajamos cada día para lograrlo.</p>
+        <p>Por eso, queremos que nos acompañéis en este viaje y que sintáis nuestra tienda como un rincón de confianza.</p>
+      </div>
+      <div class="english">
+        <h2>English:</h2>
+        <p>We deeply value our customers and strive to ensure their complete satisfaction with the products and services we offer.</p>
+        <p>That’s why, with every order, you will receive cards with discount codes or even free shipping offers.</p>
+        <p>Our goal is to become one of the best stores nationally, and we work every day to achieve this.</p>
+        <p>That’s why we want you to join us on this journey and feel our store as a place of trust.</p>
+      </div>
+    </div>
   </div>
-
-  </div>
-
-</body>
-</html>
-
 
 </body>
 </html>
