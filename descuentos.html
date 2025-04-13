@@ -3,11 +3,158 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Descuentos - Capitanbricks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CapitanBricks - Descuentos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      background-color: #cc0505;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    header .profile-info {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    header .profile-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 40px;
+      background-color: #cc0505;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-align: center;
+    }
+
+    .button img {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 5px;
+    }
+
+    .button:hover {
+      background-color: #b40404;
+      transform: scale(1.1);
+    }
+
+    .button-group a {
+      text-decoration: none;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .discount-list {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .discount-list h2 {
+      margin-top: 0;
+      color: #cc0505;
+    }
+
+    .discount-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .discount-list li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .discount-list li::before {
+      content: "🧱";
+      position: absolute;
+      left: 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Descuentos especiales</h1>
-  <p>Aquí van los descuentos actuales...</p>
-  <a href="index.html">Volver al inicio</a>
+
+  <!-- Cabecera -->
+  <header>
+    <div class="profile-info">
+      <img src="https://i.postimg.cc/MGf4jjSR/2769699.jpg" alt="Foto de Perfil" class="profile-photo">
+    </div>
+
+    <!-- Botones de Navegación -->
+    <div class="button-group">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:1}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
+      </a>
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/Descuentos.html" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
+      </a>
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
+      </a>
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
+      </a>
+      <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="_parent">
+        <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <div class="content">
+    <div class="discount-list">
+      <h2>🎉 Descuentos Especiales</h2>
+      <ul>
+        <li>10% en todas las minifiguras hasta el 30 de abril.</li>
+        <li>15% en piezas seleccionadas por tiempo limitado.</li>
+        <li>Envío gratuito en pedidos superiores a 50 € en España.</li>
+        <li>Regalo sorpresa en compras mayores a 100 €.</li>
+      </ul>
+    </div>
+  </div>
+
 </body>
 </html>
