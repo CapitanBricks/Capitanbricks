@@ -118,7 +118,7 @@
     /* Sección de Descuentos */
     .discount-section {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: flex-start;
       margin-top: 30px;
       background-color: #fff;
@@ -128,22 +128,14 @@
       width: 80%; /* Reducido al 80% */
       max-width: 1200px; /* Para no exceder un ancho grande en pantallas muy anchas */
       margin: 0 auto; /* Centrar el contenedor */
-      height: 100vh; /* Ocupa todo el alto de la página */
-      overflow: hidden;
-    }
-
-    .discount-section img {
-      width: 50%; /* La imagen ocupa la mitad del contenedor */
       height: auto;
-      object-fit: cover;
-      margin-right: 20px;
     }
 
     .discount-section .text-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 50%; /* El texto ocupa la otra mitad */
+      margin-bottom: 20px; /* Separar texto de la imagen */
     }
 
     .discount-section h2 {
@@ -157,18 +149,25 @@
       line-height: 1.6;
     }
 
+    .discount-section img {
+      width: 50%; /* La imagen ocupa la mitad del contenedor */
+      height: auto;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 15px; /* Bordes redondeados en la imagen */
+      margin-bottom: 10px; /* Espacio debajo de la imagen */
+    }
+
     /* Hacer que el texto y la imagen sean más pequeños en pantallas más pequeñas */
     @media (max-width: 768px) {
       .discount-section {
         flex-direction: column; /* Apilar la imagen y el texto en dispositivos más pequeños */
-        height: auto;
         padding: 15px;
       }
 
       .discount-section img {
         width: 100%; /* Imagen ocupa todo el ancho en pantallas pequeñas */
         margin-right: 0;
-        margin-bottom: 20px;
       }
 
       .discount-section .text-container {
@@ -207,7 +206,6 @@
 
   <!-- Nueva Sección de Descuentos -->
   <div class="discount-section">
-    <img src="https://i.postimg.cc/J45rM9Vg/Chat-GPT-Image-11-abr-2025-23-46-24.png" alt="Descuentos">
     <div class="text-container">
       <div class="spanish">
         <h2>Español:</h2>
@@ -224,7 +222,9 @@
         <p>That’s why we want you to join us on this journey and feel our store as a place of trust.</p>
       </div>
     </div>
+    <img src="https://i.postimg.cc/J45rM9Vg/Chat-GPT-Image-11-abr-2025-23-46-24.png" alt="Descuentos">
   </div>
 
 </body>
 </html>
+
