@@ -134,19 +134,19 @@
 
     <!-- Botones de Navegación en la Cabecera -->
     <div class="button-group">
-      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:1}" target="_parent">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:1}" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/52JsyFR6/553335.png" alt="Home"> Home</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/descuentos.html" target="_parent">
+      <a class="nav-link" href="https://store.bricklink.com/CapitanBricks#/shop?o={%22showHomeItems%22:0}" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/rprsHKqN/553335-2.png" alt="Discounts"> Discounts</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/shipping.html" target="_parent">
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/shipping.html" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/zvtqvrJf/how-to-draw-a-box-featured-image-1200.png" alt="Shipping"> Shipping</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/quality.html" target="_parent">
+      <a class="nav-link" href="https://capitanbricks.github.io/Capitanbricks/quality.html" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/4NDr5dFg/553335-1.png" alt="Quality"> Quality</div>
       </a>
-      <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="_parent">
+      <a class="nav-link" href="https://capitanbricks.brickowl.com/" target="content-frame">
         <div class="button"><img src="https://i.postimg.cc/2jG10cWT/images.png" alt="Brickowl"> Brickowl</div>
       </a>
     </div>
@@ -157,19 +157,22 @@
 
   <!-- Cajas de Botones con Colores -->
   <div class="buttons-container">
-    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" target="_parent" class="square-button blue">
+    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22M%22,%22showHomeItems%22:0}" target="content-frame" class="square-button blue">
       <img src="https://i.postimg.cc/26GnR9nC/sw0581-png.png" alt="Minifiguras" style="width: 120px;">
       <span>Minifiguras</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" target="_parent" class="square-button red">
+    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22P%22,%22showHomeItems%22:0}" target="content-frame" class="square-button red">
       <img src="https://i.postimg.cc/3NgNQdsm/3023-png.png" alt="Piezas" style="width: 120px;">
       <span>Piezas</span>
     </a>
-    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" target="_parent" class="square-button yellow">
+    <a href="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22sort%22:9,%22desc%22:1,%22pgSize%22:100,%22itemType%22:%22S%22,%22showHomeItems%22:0}" target="content-frame" class="square-button yellow">
       <img src="https://i.postimg.cc/vmNtcNcX/10350-Prod.png" alt="Sets" style="width: 120px;">
       <span>Sets</span>
     </a>
   </div>
+
+  <!-- Iframe donde se cargará el contenido de BrickLink -->
+  <iframe name="content-frame" src="https://store.bricklink.com/CapitanBricks?p=CapitanBricks#/shop?o={%22showHomeItems%22:1}" frameborder="0" width="100%" height="80vh"></iframe>
 
 </body>
 </html>
